@@ -46,15 +46,23 @@ for i in Orders.values
     i.display()
 }
 
-/*
-var OrdesOrdered : [Order]
-OrdesOrdered = Array<Order>()
 
-OrdesOrdered = Orders.sorted(by: {
-    (s1, s2) -> Bool in
-    s1.
-})
-
+var OrdesOrdered_pre : [Order]
+OrdesOrdered_pre = Array<Order>()
+OrdesOrdered_pre.append(or1)
+OrdesOrdered_pre.append(or2)
+OrdesOrdered_pre.append(or3)
+print("Order by Total ")
 
 
- */
+var OrdesOrdered_post : [Order]
+OrdesOrdered_post = OrdesOrdered_pre.sorted { a,b -> Bool in
+    return a.orTotal < b.orTotal
+}
+
+print("-------Orders by total")
+print(OrdesOrdered_post)
+
+
+
+
